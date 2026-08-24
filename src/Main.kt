@@ -1,3 +1,6 @@
+
+
+
 fun main() {
    var idade: Int = 2
 
@@ -24,7 +27,11 @@ fun main() {
 
     var dano = renge + (10-4)
 
-//    print("A habilidade $habilidade do usuário $nome, casou ${dano*7}")
+    print("A habilidade $habilidade do usuário $nome, casou ${dano*7}")
+
+
+
+
 
 
 
@@ -89,7 +96,7 @@ val result = somas(10, 3)
  //println( resa)
 
 
-val verdadeiro = texto.contains("human")
+val verdadeiro = texto.contains("boy")
  val verdade: Boolean = verdadeiro
 
  if (verdade == true){
@@ -169,7 +176,7 @@ val verdadeiro = texto.contains("human")
  println(numeross[1])
 
 
-
+//lista imutável, n tem como mudar
  var frutas = listOf("Banana", "Maçã", "Abacate")
  println(frutas[0])
  println(frutas.size)
@@ -178,18 +185,178 @@ val verdadeiro = texto.contains("human")
  println(frutas.contains("Maçã"))
 
 
+ //lista Mutável,  tem como mudar a vontade(adicionar)
+ var carros = mutableListOf("Lamborguine", "Up Tsi")
+ println(carros.size)
+ println(carros.last())
+ println(carros.add("Mustang"))
+ println(carros.last())
+ println(carros.size)
+ println(carros.remove("Up Tsi"))
+ println(carros.size)
+
+
+ //é imutável e n da para colocar coisas repetidas
+ val cores = setOf("azul", "Verde", "Verde")
+ println(cores)
+ println(cores.size)
+
+ //mutável
+ var cor = mutableSetOf("Azul", "Verde", "Verde")
+
+ cor.add("Amarelo")
+ cor.add("Verde")
+ cor.remove("Verde")
+ println(cor)
+
+
+
+
+ //mapa imutavel
+ val poder = mapOf(
+  "byakugan" to 25,
+  "six eyes" to 26
+ )
+ println(poder["byakugan"])
+ println(poder["six eyes"])
+ println(poder["biyakugou"])
+
+
+ //mapa mutavel
+ val poderes = mutableMapOf(
+  "expansão de dominio" to "Sukuna",
+  "Mahoraga" to "Megumi"
+ )
+
+ println(poderes["expansão de dominio"])
+ poderes["Itadori"] = "Black Flash"
+ poderes.remove("Mahoraga")
+ println(poderes)
+
+
+ for (i in 1..10){
+  println(i)
+ }
+
+
+
+ for (i in carros){
+  println(i)
+ }
+
+
+ for (i in carros.indices){
+  println(i)
+ }
+// var i = 0
+// while (1<10){
+//  println(i)
+//  i++
+// }
+
+ 1..5
+ 1 until 5
+ 5 downTo 1
+ 1..10 step 2
+
+
+ for ((indice, carro) in carros.withIndex()){
+  println("O $carro é $indice")
+ }
+
+
+
+ val anos = 200
+
+ when(anos){
+  in 0..12 -> println("Criança")
+  in 13..17 -> println("Adolescente")
+  in 18..40 -> println("adulto")
+  in 41..99 -> println("idoso")
+  else -> println("Tutancâmon")
+ }
+
+
+ println("=============================================================================")
+ println("=============================================================================")
+ println("=============================================================================")
+
+
+ //1
+ var impar = 10
+ impar %= 2
+
+ val status = if(impar == 1){
+  "Ímpar"
+ } else {
+  "Par"
+ }
+ println(status)
+
+
+
+ //2
+ var numero = 4 - 20
+ var resultado = if (numero >= 1){
+  "Positivo"
+ } else if (numero == 0) {
+  "Zero"
+ } else {
+  "Negativo"
+ }
+println(resultado)
+
+
+
+//3
+ val idades = 200
+
+ when(idades){
+  in 0..12 -> println("Criança")
+  in 13..17 -> println("Adolescente")
+  in 18..59 -> println("Adulto")
+  else -> println("Idoso")
+ }
+
+
+
+ //4
+// for (i in 1..10){
+//  println(i)
+// }
 
 
 
 
 
 
+ //9
+ var resul = calcular(2)
+ println(resul)
+
+
+//10
+ var notas = media(10.0, 7.0, 3.0)
+println(notas)
 
 
 
 
 
  //main
+}
+
+fun graus (celcios: Double) :Double{
+ return (celcios*1.8)+32
+}
+
+fun media (nota1: Double, nota2: Double, nota3: Double): Double{
+ var final = nota1 + nota2 + nota3
+ return final / 3
+}
+
+fun calcular(numero: Int): Int {
+ return numero * 2
 }
 
 fun mandaSalve(nome: String= "mano"){
@@ -220,7 +387,7 @@ pqp olha pros homens de hj em dia
 só b@iola afeminado
 no meu tempo 6 m@rri4n,
 
-n sei o q é bluthof
+n sei o q é bluetooth
 n sei o q é internet
 pra co*er mu**er nunca precisei disso
 
