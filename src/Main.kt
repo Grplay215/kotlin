@@ -296,7 +296,7 @@ val verdadeiro = texto.contains("boy")
 
 
  //2
- var numero = 4 - 20
+ var numero = 4
  var resultado = if (numero >= 1){
   "Positivo"
  } else if (numero == 0) {
@@ -315,12 +315,19 @@ println(resultado)
   in 0..12 -> println("Criança")
   in 13..17 -> println("Adolescente")
   in 18..59 -> println("Adulto")
-  else -> println("Idoso")
+  in 59..112 -> println("Idoso")
+  else -> println("morto")
  }
 
 
  //4
-
+//copiado
+/*
+ var numeroEscolhido = 7
+ for ( i in 1 .. 10){
+  println("$numeroEscolhido X $i = $numeroEscolhido")
+ }
+ */
 
 
 
@@ -336,15 +343,28 @@ var nume = arrayOf(0, 0, 0, 0)
 
 
  //6
+//copiado
 
+/*
+ val listveja = arrayOf(1, 2, 30, 5, 100)
+
+ var valormaior = listveja[0]
+ for (i in listveja)
+  if (valormaior < i){
+   valormaior = i
+  }
+
+ println(valormaior)
+ */
 
 
 
 
 
  //7
-for (i in 10 downTo  0){
- println(i)
+ var i = 30
+for (dece in i downTo  0){
+ println(dece)
 }
 
 
@@ -353,6 +373,17 @@ for (i in 10 downTo  0){
 
 
  //8
+ //copiado
+ /*
+ val reis = arrayOf(1, 2, 3, 4, 5, 6)
+ var pares = 0
+ for (numerous in reis){
+  if (numerous % 2 == 0){
+   pares += numerous
+  }
+  println(pares)
+ }
+  */
 
 
 
@@ -370,23 +401,23 @@ println(format)
 
 
  //11
-var temp = graus(21.9)
+var temp = graus(21.7)
  var formato = String.format("%.2f", temp)
  println("$formato °F")
 
 
  //main
 }
+//11
+fun graus (celcios: Double) :Double = (celcios*1.8)+32
 
-fun graus (celcios: Double) :Double{
- return (celcios*1.8)+32
-}
-
+//10
 fun media (nota1: Double, nota2: Double, nota3: Double): Double{
  var final = nota1 + nota2 + nota3
  return final / 3
 }
 
+//9
 fun calcular(numero: Int): Int {
  return numero * 2
 }
