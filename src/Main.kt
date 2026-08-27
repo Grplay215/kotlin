@@ -406,6 +406,43 @@ var temp = graus(21.7)
  println("$formato °F")
 
 
+
+
+ println("=============================================================================")
+ println("=============================================================================")
+ println("=============================================================================")
+
+
+
+ val numerosss = (1..10).toList()
+ val impares = numerosss.filter { it % 2 == 1 }
+ println(impares)
+
+
+
+ val nummer = (1..5).toList()
+ val dobros = nummer.map{
+  nummer -> nummer * 2
+ }
+ println(dobros)
+
+
+ val soma = nummer.reduce { acumulador, numerosss -> acumulador / numerosss }
+ println(soma)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  //main
 }
 //11
