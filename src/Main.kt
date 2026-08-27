@@ -319,12 +319,40 @@ println(resultado)
  }
 
 
-
  //4
-// for (i in 1..10){
-//  println(i)
-// }
 
+
+
+
+ //5
+var nume = arrayOf(0, 0, 0, 0)
+ nume[0] = 1
+ nume[1] = 2
+ nume[2] = 3
+ nume[3] = 4
+ var contas = nume[0] + nume[1] + nume[2] + nume[3]
+ println(contas)
+
+
+
+ //6
+
+
+
+
+
+
+ //7
+for (i in 10 downTo  0){
+ println(i)
+}
+
+
+
+
+
+
+ //8
 
 
 
@@ -337,10 +365,14 @@ println(resultado)
 
 //10
  var notas = media(10.0, 7.0, 3.0)
-println(notas)
+ var format = String.format("%.2f", notas)
+println(format)
 
 
-
+ //11
+var temp = graus(21.9)
+ var formato = String.format("%.2f", temp)
+ println("$formato °F")
 
 
  //main
