@@ -1,7 +1,14 @@
 
-
+import Model.Carro
+import Model.CarroTunado
 
 fun main() {
+
+
+
+
+
+
    var idade: Int = 2
 
     var altura = 1.80
@@ -414,9 +421,7 @@ var temp = graus(21.7)
 
 
 
- val numerosss = (1..10).toList()
- val impares = numerosss.filter { it % 2 == 1 }
- println(impares)
+
 
 
 
@@ -427,17 +432,107 @@ var temp = graus(21.7)
  println(dobros)
 
 
- val soma = nummer.reduce { acumulador, numerosss -> acumulador / numerosss }
+ val soma = nummer.reduce { acumulador, numerosss -> acumulador + numerosss }
  println(soma)
 
 
+ val resultes = nummer
+  .filter { it % 2 == 0 }
+  .map { it * 2 }
+  .reduce {acc, n -> acc + n}
+
+ println(resultes)
+
+
+ //=======================================================================================
+ //=======================================================================================
+
+
+
+
+ val carro = Carro()
+ val carroTunado = CarroTunado()
+
+        carro.modelo = "Fusca"
+        carro.ano = 1996
+        carro.rodar(600_000.0)
+
+
+// val carro2 =Carro()
+// carro.modelo = "Delta"
+
+
+ carroTunado.modelo = "Silvia"
+ carroTunado.ano = 1999
+ carroTunado.ranking = 's'
+
+
+
+ carro.acelerar()
+ carroTunado.acelerar()
 
 
 
 
 
+ println("=============================================================================")
+ println("=============================================================================")
+ println("=============================================================================")
 
 
+
+ //12
+ val num = (1..100)
+
+ for (it in num){
+  val resu = when{
+   it % 3 == 0 && it % 5 == 0 -> "BatataQuente"
+   it %3 == 0 -> "Batata"
+   it %5 == 0 -> "Quente"
+   else -> it.toString()
+  }
+  println(resu)
+
+ }
+
+
+ //13
+ val numerosss = (1..10).toList()
+ val impares = numerosss.filter { it % 2 == 1 }
+ println(impares)
+
+ //14
+ val valor = arrayOf(1, 10, 5, 100, 35)
+ val aumento = valor.sum()
+println(aumento)
+
+ //15
+ val listveja = arrayOf(10, 15, 30, 60, 68, 70, 80, 87, 90, 79)
+ var valormaioridade = listveja.filter { it >= 60 }
+ println(valormaioridade)
+
+//16
+
+
+
+ //17
+var dadospessoa = dados("Fernando", 21, "Pirapora")
+ println(dadospessoa)
+
+
+//18
+ var precoEscolhido = arrayOf(12, 15, 20, 8, 21)
+ var produtoescolhido = arrayOf("computador", "mouse", "teclado", "relogio", "monitor")
+ for ( i in precoEscolhido.indices){
+  println("${produtoescolhido[i]} R$${precoEscolhido[i]} ")
+ }
+
+
+ //19
+
+
+
+ //20
 
 
 
@@ -445,6 +540,18 @@ var temp = graus(21.7)
 
  //main
 }
+
+
+
+//17
+fun dados (nome: String, idade: Int, cidade: String){
+ println("$nome tem $idade anos e mora em $cidade")
+}
+
+
+
+
+
 //11
 fun graus (celcios: Double) :Double = (celcios*1.8)+32
 
@@ -493,4 +600,5 @@ pra co*er mu**er nunca precisei disso
 
 [...]
 */
+
 
