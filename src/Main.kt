@@ -1,6 +1,7 @@
 
 import Model.Carro
 import Model.CarroTunado
+import Model.Contabancaria
 
 fun main() {
 
@@ -455,7 +456,7 @@ var temp = graus(21.7)
 
         carro.modelo = "Fusca"
         carro.ano = 1996
-        carro.rodar(600_000.0)
+
 
 
 // val carro2 =Carro()
@@ -466,8 +467,8 @@ var temp = graus(21.7)
  carroTunado.ano = 1999
  carroTunado.ranking = 's'
 
-
-
+carro.consultarkm()
+ carro.rodar(600_000.0)
  carro.acelerar()
  carroTunado.acelerar()
 
@@ -529,6 +530,9 @@ var dadospessoa = dados("Fernando", 21, "Pirapora")
 
 
  //19
+ val conta = Contabancaria("Matheus")
+ conta.depositar(100.0)
+ conta.sacar(-20.0)
 
 
 
